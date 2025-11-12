@@ -1,27 +1,27 @@
-import { Grid, GridItem } from '@chakra-ui/react';
-import NavBar from './components/NavBar';
-import GameGrid from './components/GameGrid';
+import { Grid, GridItem } from "@chakra-ui/react";
+import GameGrid from "./components/GameGrid";
+import NavBar from "./components/NavBar";
 
 function App() {
-  return (
-    <Grid
-      templateAreas={{
-        base: `"nav" "main"`,
-        lg: `"nav nav" "aside main"`,
-      }}
-    >
-      <GridItem area='nav'>
-        <NavBar />
-      </GridItem>
-      <GridItem area='aside' bg='gold' hideBelow='lg'>
-        aside
-      </GridItem>
+	return (
+		<Grid
+			templateAreas={{
+				base: `"nav" "main"`,
+				lg: `"nav nav" "aside main"`,
+			}}
+		>
+			<GridItem area="nav">
+				<NavBar />
+			</GridItem>
+			<GridItem area="aside" bg="gold" hideBelow="lg">
+				aside
+			</GridItem>
 
-      <GridItem area='main'>
-        <GameGrid />
-      </GridItem>
-    </Grid>
-  );
+			<GridItem area="main">
+				<GameGrid />
+			</GridItem>
+		</Grid>
+	);
 }
 
 export default App;
